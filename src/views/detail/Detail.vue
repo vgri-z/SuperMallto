@@ -12,7 +12,7 @@
     </Scroll>
     <detail-bottom-bar @addCart="addToCart"></detail-bottom-bar>
     <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
-    <toast :message="message" :is-show="isShow"></toast>
+    <!-- <toast :message="message" :is-show="isShow"></toast> -->
   </div>
 </template>
 
