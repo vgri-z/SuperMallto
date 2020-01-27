@@ -37,24 +37,36 @@ export default {
     });
 
     // 2.监听滚动位置
-    this.scroll.on("scroll", position => {
-      // console.log(position);
-      this.$emit("scroll", position)
-    })
+    if(this.probeType === 2 || this.probeType === 3) {
+      this.scroll.on("scroll", position => {
+        // console.log(position);
+        this.$emit("scroll", position)
+      })
+    }
+
+    console.log(this.scroll);
 
     // 3.上拉加载更多
-    this.scroll.on("pullingUp", () => {
-      console.log("上拉加载更多");
-      this.$emit("pullingUp");
-    })
+    if(this.pullUpLoad) {
+      this.scroll.on("pullingUp", () => {
+        // console.log("监听到了底部");
+        this.$emit("pullingUp");
+      })
+    }
   },
 
   methods: {
     scrollTo(x, y, time = 600) {
-      this.scroll.scrollTo(x, y, time);
+      this.scroll && this.scroll.scrollTo(x, y, time);
     },
     finishPullUp() {
-      this.scroll.finishPullUp();
+     this.scroll && this.scroll.finishPullUp();
+    },
+    refresh() {
+      this.scroll && this.scroll.refresh();
+    },
+    getScrollY() {
+      return this.scroll ? this.scroll.y : 0
     }
   }
 };

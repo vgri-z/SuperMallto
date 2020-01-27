@@ -117,7 +117,7 @@ export default {
   },
   // 组件挂载好了调用
   mounted() {
-    console.log(document.querySelector(".wrapper"))
+    // console.log(document.querySelector(".wrapper"))
     this.scroll = new BScroll(document.querySelector(".wrapper"), {
 
     })
