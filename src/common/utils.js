@@ -1,4 +1,4 @@
-  // 防抖函数封装
+// 防抖函数封装
 export function debounce(func, delay) {
   let timer = null;
   return function(...args) {
@@ -9,7 +9,7 @@ export function debounce(func, delay) {
   };
 }
 
-  // 时间戳转化函数
+// 时间戳转化函数
 export function formatDate(date, fmt) {
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length));

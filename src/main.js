@@ -14,7 +14,7 @@ Vue.use(VueLazyLoad, {
   loading: require("assets/img/common/dijia.jpg")
 })
 
-FastClick.attach(document.body);
+FastClick.attach(document.body)
 
 new Vue({
   render: h => h(App),

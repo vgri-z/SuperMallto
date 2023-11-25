@@ -4,7 +4,7 @@ const obj = {}
 
 obj.install = function (Vue) {
 
-  // 1.创建组件构造器
+  // 1.创建组件构造器，通过extend的方式创建
   const toastConstructor = Vue.extend(Toast)
 
   // 2.new的方式，根据组件构造器，可以创建出来一个组件对象

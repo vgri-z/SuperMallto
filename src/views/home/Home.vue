@@ -183,11 +183,11 @@
     z-index: 9;
   } */
 
-    .tab-control {
-      position: relative;
-      z-index: 9;
-      background: #fff;
-    }
+  .tab-control {
+    position: relative;
+    z-index: 9;
+    background: #fff;
+  }
 
   .content {
     position: absolute;

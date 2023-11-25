@@ -7,26 +7,26 @@
 </template>
 
 <script>
-import CartListItem from "./CartListItem";
+  import CartListItem from "./CartListItem";
 
-import Scroll from "components/common/scroll/Scroll";
+  import Scroll from "components/common/scroll/Scroll";
 
-import { mapGetters } from "vuex";
+  import { mapGetters } from "vuex";
 
-export default {
-  name: "CartList",
-  components: {
-    CartListItem,
-    Scroll
-  },
-  computed: {
-    ...mapGetters(["cartList"])
-  },
+  export default {
+    name: "CartList",
+    components: {
+      CartListItem,
+      Scroll
+    },
+    computed: {
+      ...mapGetters(["cartList"])
+    },
 
-  activated() {
-    this.$refs.scroll.refresh();
-  },
-};
+    activated() {
+      this.$refs.scroll.refresh();
+    },
+  };
 </script>
 
 <style scoped>

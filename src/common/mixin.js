@@ -13,6 +13,7 @@ export const itemImgListenerMixin = {
       refresh();
     }
     this.$bus.$on("itemImgLoad", this.itemImgListener);
+    
     // console.log("mixinssssss");
   },
 }
